@@ -1,72 +1,25 @@
 {
-	"title": "Cool Title",
-	"store": {
-		"telegram": "https://t.me/wawceo"
-	},
-	"top_products": [
+	"name": "products",
+	"tags": [
 		{
-			"id": "/product",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "/product",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "/product",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "product"
-		}
-	],
-	"products": [
-		{
-			"id": "/product",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "/product",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "/product",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "product"
-		}
-	],
-	"articles": [
-		{
-			"id": "/article",
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "article"
-		},
-		{
-			"id": "/article",
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "article"
-		},
-		{
-			"id": "/article",
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
-			"name": "article"
+			"name": "Напої",
+			"products": [
+				{
+					"name": "Кава по східному Преміум Вірменкаа",
+					"price": "60ГРН",
+					"description": "100% АРАБІКА Кава з насиченим смаком, яскраво вираженою кислинкою і фруктово - квітковим відтінком. Має тонкий аромат і легкий винний післясмак."
+				},
+				{
+					"name": "Кава по-східному Суміш Вірменка",
+					"price": "50ГРН",
+					"description": "СУМІШ ВІРМЕНКА 100% Арабіка. Відчутна гірчинка та квіткові ноти, з приємним післясмаком збалансованої кислинки і горіховими відтінками. Поціновувачі мʼякої кави оцінять ніжний аромат тропічних квітів і винних ноток."
+				},
+				{
+					"name": "Кава по-східному Супер бленд Діема",
+					"price": "30ГРН",
+					"description": "100% АРАБІКА MISCELA SUPER. Поєднання арабіки з пʼяти різних країн: Індія, Бразилія, Колумбія, Сальвадор, Танзанія. Відчутні легкі нотки чорного шоколаду та фруктів, з приємним післясмаком збалансованої гірчинки і чорносливовими відтінками."
+				}
+			]
 		}
 	]
 }

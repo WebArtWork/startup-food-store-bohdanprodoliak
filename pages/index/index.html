@@ -1,12 +1,269 @@
-{% for product in top_products %}
-	<h1>{{{product.name}}}</h1>
-	<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
-{% endfor %}
-{% for product in products %}
-	<h1>{{{product.name}}}</h1>
-	<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
-{% endfor %}
-{% for article in articles %}
-	<h1>{{{article.name}}}</h1>
-	<img src="{{{article.thumb}}}" alt="{{{article.name}}}">
-{% endfor %}
+<header class="header">
+  <div class="container">
+<<<<<<< HEAD
+    <a href="" class="header_logo">
+      <img src="/template/img/logo.svg" alt="">
+    </a>
+    <div class="burger-wrap">
+      <div class="burger"></div>
+  </div>
+    <div class="header_wrap">
+      
+      <ul class="header_left">
+        <li><a href="">Про нас</a></li>
+        <li> <a href="">Меню кав'ярні</a> </li>
+        <li> <a href="">Кондитирська</a> </li>
+      </ul>
+     
+        <ul class="header_left">
+          <li> <a href="">Історія</a> </li>
+          <li> <a href="">Алкоголь</a> </li>
+          <li> <a href="">Контакти</a> </li>
+        </ul>
+    </div>
+  <div class="header_links">
+    <div class="header_links-item">
+      <a href="">
+        <img src="/template/img/call.svg" alt="">
+      </a>
+    </div>
+    <div class="header_links-item">
+      <a href="">
+        <img src="/template/img/cart.svg" alt="">
+      </a>
+    </div>
+  </div>  
+  </div>
+  
+</header>
+<div class="main">
+  <div class="container">
+    <div class="main_page">
+      Головна - <span>Меню кав*ярні</span>
+    </div>
+    <div class="main_title">
+      Меню
+    </div>
+    <div class="main_wrap">
+      <div class="main_sidebar-burger">
+          Меню -
+      </div>
+      <div class="main_sidebar">
+        <div class="main_sidebar-content">
+          {% for tag in tags %}
+          <div class="main_sidebar-item">
+            <a href="" class="main_sidebar-title">
+              {{{tag.name}}}
+            </a>
+            <ul class="main_sidebar-positions">
+              <li><a href="">Кава та чай</a></li>
+              <li><a href="">Холодні і без алкогольні напої</a></li>
+              <li><a href="">Алкоголь</a></li>
+            </ul>
+          </div>
+          {% endfor %}
+          <div class="main_sidebar-item">
+            <a href="" class="main_sidebar-title">
+              Гарячі страви
+            </a>
+            <ul class="main_sidebar-positions">
+              <li><a href="">Кава та чай</a></li>
+              <li><a href="">Холодні і без алкогольні напої</a></li>
+              <li><a href="">Алкоголь</a></li>
+            </ul>
+          </div>
+          <div class="main_sidebar-item">
+            <a href="" class="main_sidebar-title">
+              Напої
+            </a>
+=======
+    <div class="header_wrap">
+      <ul class="header_left">
+        <li>Про нас</li>
+        <li>Меню кав'ярні</li>
+        <li>Кондитирська</li>
+      </ul>
+      <a href="" class="header_logo">
+        <img src="/template/img/logo.svg" alt="">
+      </a>
+        <ul class="header_left">
+          <li>Історія</li>
+          <li>Алкоголь</li>
+          <li>Контакти</li>
+        </ul>
+    </div>
+    
+  </div>
+</header>
+<div class="main">
+  <div class="container">
+    <div class="main_page">
+      Головна - <span>Меню кав*ярні</span>
+    </div>
+    <div class="main_title">
+      Меню
+    </div>
+    <div class="main_wrap">
+      <div class="main_sidebar">
+        <div class="main_sidebar-content">
+          <div class="main_sidebar-item">
+            <div class="main_sidebar-title">
+              Напої
+            </div>
+            <ul class="main_sidebar-positions">
+              <li>Кава та чай</li>
+              <li>Холодні і без алкогольні напої</li>
+              <li>Алкоголь</li>
+            </ul>
+          </div>
+          <div class="main_sidebar-item">
+            <div class="main_sidebar-title">
+              Напої
+            </div>
+            <ul class="main_sidebar-positions">
+              <li>Кава та чай</li>
+              <li>Холодні і без алкогольні напої</li>
+              <li>Алкоголь</li>
+            </ul>
+          </div>
+          <div class="main_sidebar-item">
+            <div class="main_sidebar-title">
+              Напої
+            </div>
+>>>>>>> b2399e834c5971958e8cf9b146929ece006cb9fc
+            <ul class="main_sidebar-positions">
+              <li>Кава та чай</li>
+              <li>Холодні і без алкогольні напої</li>
+              <li>Алкоголь</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main_center">
+        <div class="main_center-wrap">
+          <div class="menu-list">
+<<<<<<< HEAD
+            {% for tag in tags %}
+            <div class="menu_category">
+              {{{tag.name}}}
+            </div>
+            {% for product in tag.products %}
+            <div class="menu-list_item">
+              <div class="menu-list_title">
+                {{{product.name}}}
+              </div>
+              <div class="menu-list_desc">
+                {{{product.description}}}
+              </div>
+              <div class="menu-list_price">
+                {{{product.price}}}
+              </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+=======
+            <div class="menu_category">
+              Кава та чай
+            </div>
+            <div class="menu-list_item">
+              <div class="menu-list_title">
+                Кава по східному
+              </div>
+              <div class="menu-list_desc">
+                asdkasldasmadskfmasd;k fasdpfk sad;lk ads;f kasd;lfk ads;lf kadl;sf adf a
+              </div>
+              <div class="menu-list_price">
+                58грн
+              </div>
+            </div>
+            <div class="menu-list_item">
+              <div class="menu-list_title">
+                Кава по східному
+              </div>
+              <div class="menu-list_desc">
+                asdkasldasmadskfmasd;k fasdpfk sad;lk ads;f kasd;lfk ads;lf kadl;sf adf a
+              </div>
+              <div class="menu-list_price">
+                58грн
+              </div>
+            </div>
+            
+>>>>>>> b2399e834c5971958e8cf9b146929ece006cb9fc
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer_wrap">
+      <div class="footer_logo">
+        <a href="">
+          <img src="/template/img/black.svg" alt="">
+        </a>
+        <button class="footer_logo-btn">Увійти</button>
+      </div>
+      <div class="footer_links">
+        <div class="footer_links-item">
+          <div class="footer_links-title">
+            Title of links
+          </div>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+        </div>
+        <div class="footer_links-item">
+          <div class="footer_links-title">
+            Title of links
+          </div>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+        </div>
+        <div class="footer_links-item">
+          <div class="footer_links-title">
+            Title of links
+          </div>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+          <a href="" class="footer_links-link">
+            Про нас
+          </a>
+        </div>
+<<<<<<< HEAD
+        <div class="footer_links-item">
+          <a href="">
+            <img src="/template/img/callb.svg" alt="">
+            <span>{{{variables.tel}}}</span>
+          </a>
+          <a href="">
+            <img src="/template/img/clock.svg" alt="">
+            <span>{{{variables.workingHours}}}</span>
+          </a>
+        </div>
+=======
+>>>>>>> b2399e834c5971958e8cf9b146929ece006cb9fc
+      </div>
+    </div>
+  </div>
+  <div class="footer_cop">
+    (C) Create by Bogdan Prodolyak
+  </div>
+</footer>

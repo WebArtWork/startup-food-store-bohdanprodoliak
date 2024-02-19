@@ -1,8 +1,122 @@
-{% for product in products %}
-<h1>{{{product.name}}}</h1>
-<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
-<div>
-	{{{product.short}}}
+<header class="header">
+	<div class="container">
+		<a href="" class="header_logo">
+			<img src="/bohdanprodoliak/img/logo.svg" alt="" />
+		</a>
+		<div class="burger-wrap">
+			<div class="burger"></div>
+		</div>
+		<!-- <div class="header_wrap">
+			<ul class="header_left">
+				<li><a href="">Про нас</a></li>
+				<li><a href="">Меню кав'ярні</a></li>
+				<li><a href="">Кондитирська</a></li>
+			</ul>
+
+			<ul class="header_left">
+				<li><a href="">Історія</a></li>
+				<li><a href="">Алкоголь</a></li>
+				<li><a href="">Контакти</a></li>
+			</ul>
+		</div> -->
+		<div class="header_links">
+			<div class="header_links-item">
+				<a href="">
+					<img src="/bohdanprodoliak/img/call.svg" alt="" />
+				</a>
+			</div>
+			<div class="header_links-item">
+				<a href="">
+					<img src="/bohdanprodoliak/img/cart.svg" alt="" />
+				</a>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="main">
+	<div class="container">
+		<div class="main_page">Головна - <span>Меню кав*ярні</span></div>
+		<div class="main_title">Меню</div>
+		<div class="main_wrap">
+			<div class="main_sidebar-burger">Меню -</div>
+			<div class="main_sidebar">
+				<div class="main_sidebar-content">
+					{% for tag in tags %}
+					<div class="main_sidebar-item">
+						<a href="#{{{tag.id}}}" class="main_sidebar-title"> {{{tag.name}}} </a>
+						<!-- <ul class="main_sidebar-positions">
+							<li><a href="">Кава та чай</a></li>
+							<li><a href="">Холодні і без алкогольні напої</a></li>
+							<li><a href="">Алкоголь</a></li>
+						</ul> -->
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="main_center">
+				<div class="main_center-wrap">
+					<div class="menu-list">
+						{% for tag in tags %}
+						<div class="menu_category" id="{{{tag.id}}}">{{{tag.name}}}</div>
+						{% for product in tag.products %}
+						<div class="menu-list_item">
+							<div class="menu-list_title">{{{product.name}}}</div>
+							<div class="menu-list_desc">{{{product.description}}}</div>
+							<div class="menu-list_price">{{{product.price}}}</div>
+						</div>
+						{% endfor %} {% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<span>{{{product.price}}}</span>
-{% endfor %}
+<footer class="footer">
+	<div class="container">
+		<div class="footer_wrap">
+			<div class="footer_logo">
+				<a href="">
+					<img src="/bohdanprodoliak/img/black.svg" alt="" />
+				</a>
+				<button class="footer_logo-btn">Увійти</button>
+			</div>
+			<div class="footer_links">
+				<!-- <div class="footer_links-item">
+					<div class="footer_links-title">Title of links</div>
+					<a href="" class="footer_links-link"> Про нас </a>
+					<a href="" class="footer_links-link"> Про нас </a>
+					<a href="" class="footer_links-link"> Про нас </a>
+				</div>
+				<div class="footer_links-item">
+					<div class="footer_links-title">Title of links</div>
+					<a href="" class="footer_links-link"> Про нас </a>
+					<a href="" class="footer_links-link"> Про нас </a>
+					<a href="" class="footer_links-link"> Про нас </a>
+				</div>
+				<div class="footer_links-item">
+					<div class="footer_links-title">Title of links</div>
+					<a href="" class="footer_links-link"> Про нас </a>
+					<a href="" class="footer_links-link"> Про нас </a>
+					<a href="" class="footer_links-link"> Про нас </a>
+				</div> -->
+				{% if variables.tel || variables.workingHours %}
+				<div class="footer_links-item">
+					{% if variables.tel %}
+					<a href="tel:{{{variables.tel}}}">
+						<img src="/bohdanprodoliak/img/callb.svg" alt="" />
+						<span>{{{variables.tel}}}</span>
+					</a>
+					{% endif %}
+					{% if variables.workingHours %}
+					<span>
+						<img src="/bohdanprodoliak/img/clock.svg" alt="" />
+						<span>{{{variables.workingHours}}}</span>
+					</span>
+					{% endif %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="footer_cop">(C) Create by Bogdan Prodolyak</div>
+</footer>

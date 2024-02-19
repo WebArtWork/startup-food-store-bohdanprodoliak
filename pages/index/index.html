@@ -6,19 +6,6 @@
 		<div class="burger-wrap">
 			<div class="burger"></div>
 		</div>
-		<div class="header_wrap">
-			<ul class="header_left">
-				<li><a href="">Про нас</a></li>
-				<li><a href="">Меню кав'ярні</a></li>
-				<li><a href="">Кондитирська</a></li>
-			</ul>
-
-			<ul class="header_left">
-				<li><a href="">Історія</a></li>
-				<li><a href="">Алкоголь</a></li>
-				<li><a href="">Контакти</a></li>
-			</ul>
-		</div>
 		<div class="header_links">
 			<div class="header_links-item">
 				<a href="">
@@ -43,44 +30,29 @@
 				<div class="main_sidebar-content">
 					{% for tag in tags %}
 					<div class="main_sidebar-item">
-						<a href="" class="main_sidebar-title"> {{{tag.name}}} </a>
-						<ul class="main_sidebar-positions">
-							<li><a href="">Кава та чай</a></li>
-							<li><a href="">Холодні і без алкогольні напої</a></li>
-							<li><a href="">Алкоголь</a></li>
-						</ul>
+						<a href="products/#{{{tag.id}}}" class="main_sidebar-title"> {{{tag.name}}} </a>
 					</div>
 					{% endfor %}
-					<div class="main_sidebar-item">
-						<a href="" class="main_sidebar-title"> Гарячі страви </a>
-						<ul class="main_sidebar-positions">
-							<li><a href="">Кава та чай</a></li>
-							<li><a href="">Холодні і без алкогольні напої</a></li>
-							<li><a href="">Алкоголь</a></li>
-						</ul>
-					</div>
-					<div class="main_sidebar-item">
-						<a href="" class="main_sidebar-title"> Напої </a>
-						<ul class="main_sidebar-positions">
-							<li>Кава та чай</li>
-							<li>Холодні і без алкогольні напої</li>
-							<li>Алкоголь</li>
-						</ul>
-					</div>
 				</div>
 			</div>
 			<div class="main_center">
 				<div class="main_center-wrap">
 					<div class="menu-list">
 						{% for tag in tags %}
-						<div class="menu_category">{{{tag.name}}}</div>
+						<div class="menu_category" id="{{{tag.id}}}">{{{tag.name}}}</div>
 						{% for product in tag.products %}
 						<div class="menu-list_item">
-							<div class="menu-list_title">{{{product.name}}}</div>
-							<div class="menu-list_desc">{{{product.description}}}</div>
-							<div class="menu-list_price">{{{product.price}}}</div>
+							<div class="menu-list_item-text">
+								<div class="menu-list_title">{{{product.name}}}</div>
+								<div class="menu-list_desc">{{{product.description}}}</div>
+								<div class="menu-list_price">{{{product.price}}}</div>
+							</div>
+							<div class="menu-list_item-img">
+								<img src="{{{product.thumb}}}" alt="">
+							</div>
 						</div>
-						{% endfor %} {% endfor %}
+						{% endfor %}
+						{% endfor %}
 					</div>
 				</div>
 			</div>
@@ -97,7 +69,7 @@
 				<button class="footer_logo-btn">Увійти</button>
 			</div>
 			<div class="footer_links">
-				<div class="footer_links-item">
+				<!-- <div class="footer_links-item">
 					<div class="footer_links-title">Title of links</div>
 					<a href="" class="footer_links-link"> Про нас </a>
 					<a href="" class="footer_links-link"> Про нас </a>
@@ -114,17 +86,23 @@
 					<a href="" class="footer_links-link"> Про нас </a>
 					<a href="" class="footer_links-link"> Про нас </a>
 					<a href="" class="footer_links-link"> Про нас </a>
-				</div>
+				</div> -->
+				{% if variables.tel || variables.workingHours %}
 				<div class="footer_links-item">
-					<a href="">
+					{% if variables.tel %}
+					<a href="tel:{{{variables.tel}}}">
 						<img src="/bohdanprodoliak/img/callb.svg" alt="" />
 						<span>{{{variables.tel}}}</span>
 					</a>
+					{% endif %}
+					{% if variables.workingHours %}
 					<a href="">
 						<img src="/bohdanprodoliak/img/clock.svg" alt="" />
 						<span>{{{variables.workingHours}}}</span>
 					</a>
+					{% endif %}
 				</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
